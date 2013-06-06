@@ -1,5 +1,5 @@
-cookbook-zeromq
-===============
+cookbook-ce-front-end
+=====================
 
 Chef cookbook to install ce-front-end
 
