@@ -1,7 +1,7 @@
 cookbook-ce-front-end
 =====================
 
-Chef cookbook to install ce-front-end
+Chef cookbook to installand start a ce-front-end instance
 
 ## Depends
 
@@ -19,7 +19,9 @@ Attributes are specified under the `ce_front_end` keyspace.
 
 ### default
 
-Installs ce-front-end
+- Installs ce-front-end to the given directory
+- Runs npm install to get dependencies
+- Runs npm start to start the ce-front-end
 
 ## License
 Copyright (c) 2013 Peter Halliday  
