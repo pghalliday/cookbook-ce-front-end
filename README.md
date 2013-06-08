@@ -1,7 +1,7 @@
 cookbook-ce-front-end
 =====================
 
-Chef cookbook to installand start a ce-front-end instance
+Chef cookbook to install and start a ce-front-end instance
 
 ## Depends
 
