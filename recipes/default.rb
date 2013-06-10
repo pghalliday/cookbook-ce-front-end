@@ -2,23 +2,27 @@ include_recipe "nodejs"
 include_recipe "git"
 include_recipe "zeromq"
 
-bash "clone ce-front-end to #{node[:ce_front_end][:installDirectory]}" do
-  code <<-EOH
-    git clone https://github.com/pghalliday/ce-front-end.git #{node[:ce_front_end][:installDirectory]}
-  EOH
-  not_if { ::FileTest.exists?(node[:ce_front_end][:installDirectory]) }
+user node[:ce_front_end][:user] do
 end
 
-bash "npm install" do
-  code <<-EOH
-    cd #{node[:ce_front_end][:installDirectory]}
-    npm install
+git "#{node[:ce_front_end][:destination]}" do
+  user node[:ce_front_end][:user]
+  repository node[:ce_front_end][:repository]
+  destination node[:ce_front_end][:destination]
+  not_if { ::FileTest.exists?(node[:ce_front_end][:destination]) }
+end
+
+file "#{node[:ce_front_end][:destination]}/config.json" do
+  owner node[:ce_front_end][:user]
+  content <<-EOH
+{
+  "port": #{node[:ce_front_end][:port]}
+}
   EOH
 end
 
-bash "npm start" do
+bash "start ce-front-end server" do
   code <<-EOH
-    cd #{node[:ce_front_end][:installDirectory]}
-    npm start
+    su -l #{node[:ce_front_end][:user]} -c "cd #{node[:ce_front_end][:destination]} && npm install && npm start"
   EOH
 end

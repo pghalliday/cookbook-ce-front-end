@@ -1,4 +1,7 @@
-default[:ce_front_end][:installDirectory] = "/opt/ce-front-end"
+default[:ce_front_end][:repository] = "https://github.com/pghalliday/ce-front-end.git"
+default[:ce_front_end][:destination] = "/opt/ce-front-end"
+default[:ce_front_end][:user] = "ce-front-end"
+default[:ce_front_end][:port] = "3000"
 
 # dependency defaults
 default[:nodejs][:install_method] = "source"
