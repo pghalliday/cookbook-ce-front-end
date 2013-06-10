@@ -17,6 +17,7 @@ Attributes are specified under the `ce_front_end` keyspace.
 - `node[:ce_front_end][:destination]` - the directory to install ce-front-end to (defaults to "/opt/ce-front-end")
 - `node[:ce_front_end][:user]` - the user to install and start ce-front-end as (defaults to "ce-front-end")
 - `node[:ce_front_end][:port]` - the port to for the ce-front-end server to listen on (defaults to "3000")
+- `node[:ce_front_end][:ce_operation_hub]` - the ce-operation-hub instance to connect to (defaults to "tcp://127.0.0.1:4000")
 
 ## Recipes
 

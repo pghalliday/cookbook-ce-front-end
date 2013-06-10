@@ -17,6 +17,7 @@ file "#{node[:ce_front_end][:destination]}/config.json" do
   content <<-EOH
 {
   "port": #{node[:ce_front_end][:port]}
+  "ce-operation-hub": "#{node[:ce_front_end][:ce_operation_hub]}"
 }
   EOH
 end
