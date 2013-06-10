@@ -16,7 +16,7 @@ file "#{node[:ce_front_end][:destination]}/config.json" do
   owner node[:ce_front_end][:user]
   content <<-EOH
 {
-  "port": #{node[:ce_front_end][:port]}
+  "port": #{node[:ce_front_end][:port]},
   "ce-operation-hub": "#{node[:ce_front_end][:ce_operation_hub]}"
 }
   EOH
