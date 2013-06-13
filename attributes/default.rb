@@ -9,8 +9,7 @@ default[:ce_front_end][:ce_delta_hub][:subscriber_port] = "5000"
 default[:ce_front_end][:ce_delta_hub][:xrequest_port] = "5001"
 
 # dependency defaults
-default[:nodejs][:install_method] = "source"
-default[:nodejs][:version] = "0.10.9"
+default[:nodejs][:install_method] = "package"
 default[:git][:version] = "1.8.3"
 default[:zeromq][:version] = "3.2.3"
 default[:zeromq][:url] = "http://download.zeromq.org"
