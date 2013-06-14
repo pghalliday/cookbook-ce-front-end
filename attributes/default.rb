@@ -3,10 +3,10 @@ default[:ce_front_end][:destination] = "/opt/ce-front-end"
 default[:ce_front_end][:user] = "ce-front-end"
 default[:ce_front_end][:port] = "3000"
 default[:ce_front_end][:ce_operation_hub][:host] = "localhost"
-default[:ce_front_end][:ce_operation_hub][:port] = "4000"
+default[:ce_front_end][:ce_operation_hub][:submit] = "4000"
 default[:ce_front_end][:ce_delta_hub][:host] = "localhost"
-default[:ce_front_end][:ce_delta_hub][:subscriber_port] = "5000"
-default[:ce_front_end][:ce_delta_hub][:xrequest_port] = "5001"
+default[:ce_front_end][:ce_delta_hub][:stream] = "5000"
+default[:ce_front_end][:ce_delta_hub][:state] = "5001"
 
 # dependency defaults
 default[:nodejs][:install_method] = "package"

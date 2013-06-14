@@ -19,12 +19,12 @@ file "#{node[:ce_front_end][:destination]}/config.json" do
   "port": #{node[:ce_front_end][:port]},
   "ce-operation-hub": {
     "host": "#{node[:ce_front_end][:ce_operation_hub][:host]}",
-    "port": #{node[:ce_front_end][:ce_operation_hub][:port]}
+    "submit": #{node[:ce_front_end][:ce_operation_hub][:submit]}
   },
   "ce-delta-hub": {
     "host": "#{node[:ce_front_end][:ce_delta_hub][:host]}",
-    "subscriber-port": #{node[:ce_front_end][:ce_delta_hub][:subscriber_port]},
-    "xrequest-port": #{node[:ce_front_end][:ce_delta_hub][:xrequest_port]}
+    "stream": #{node[:ce_front_end][:ce_delta_hub][:stream]},
+    "state": #{node[:ce_front_end][:ce_delta_hub][:state]}
   }
 }
   EOH
