@@ -17,6 +17,9 @@ file "#{node[:ce_front_end][:destination]}/config.json" do
   content <<-EOH
 {
   "port": #{node[:ce_front_end][:port]},
+  "commission": {
+    "account": #{node[:ce_front_end][:commission][:account]}
+  },
   "ce-operation-hub": {
     "host": "#{node[:ce_front_end][:ce_operation_hub][:host]}",
     "submit": #{node[:ce_front_end][:ce_operation_hub][:submit]}

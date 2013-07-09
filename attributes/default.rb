@@ -2,6 +2,7 @@ default[:ce_front_end][:repository] = "https://github.com/pghalliday/ce-front-en
 default[:ce_front_end][:destination] = "/opt/ce-front-end"
 default[:ce_front_end][:user] = "ce-front-end"
 default[:ce_front_end][:port] = "3000"
+default[:ce_front_end][:commission][:account] = "commission"
 default[:ce_front_end][:ce_operation_hub][:host] = "localhost"
 default[:ce_front_end][:ce_operation_hub][:submit] = "4000"
 default[:ce_front_end][:ce_delta_hub][:host] = "localhost"
